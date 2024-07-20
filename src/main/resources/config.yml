@@ -1,0 +1,21 @@
+# 进服务GUI公告
+notice-gui:
+  enable: false
+  title: "欢迎来到我的服务器"
+  size: ""
+  sound: ""
+
+# 设置玩家出生点
+setspawn:
+  enable: false
+  x:
+  y:
+  z:
+
+# 消息
+messages:
+  prefix: "&8[&6MylifeToolbox&8]&7 "
+  reload: "插件重载成功！"
+  setspawn: "设置成功！"
+  spawn: "已传送到指定地点！"
+

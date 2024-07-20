@@ -1,0 +1,19 @@
+name: MylifeToolbox
+version: '${version}'
+main: org.almikey.mylifetoolbox.MylifeToolbox
+api-version: '1.20'
+author: ALMikey
+description: MylifeCraft Server Plugins
+website: https://afdian.net/a/ALMikey
+softdepend:
+  - PlaceholderAPI
+  - Oraxen
+  - ItemsAdder
+  - ModelEngine
+commands:
+  mylifetoolbox:
+    description: "unknown..."
+    usage: "/mylifetoolbox [command]"
+    aliases: [ mytoolbox ]
+    permission: mylifetoolbox.command.use
+    permission-message: "&cYou do not have permission to use."
