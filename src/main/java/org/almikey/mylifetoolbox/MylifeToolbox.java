@@ -14,6 +14,7 @@ public final class MylifeToolbox extends JavaPlugin {
     public void onEnable() {
         getLogger().info("Enable！");
         saveDefaultConfig();
+
         // Command
         getServer().getPluginCommand("mylifetoolbox").setExecutor(new Command(this));
 

@@ -11,6 +11,8 @@ setspawn:
   x:
   y:
   z:
+  yaw:
+  pitch:
 
 # 消息
 messages:

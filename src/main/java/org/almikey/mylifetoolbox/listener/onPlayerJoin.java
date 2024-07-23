@@ -3,7 +3,7 @@ package org.almikey.mylifetoolbox.listener;
 import org.almikey.mylifetoolbox.MylifeToolbox;
 import org.almikey.mylifetoolbox.manager.NoticeguiManager;
 import org.almikey.mylifetoolbox.manager.SetspawnManager;
-import org.almikey.mylifetoolbox.manager.plugin.GetConfigManager;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -18,16 +18,17 @@ public class onPlayerJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
 
-        GetConfigManager gcm = new GetConfigManager(plugin);
+        NoticeguiManager  noticeguiManager = new NoticeguiManager(plugin);
+        SetspawnManager setspawnManager = new SetspawnManager(plugin);
 
-        if (gcm.getBoolean("notice-gui.enable")){
-            NoticeguiManager  noticeguiManager = new NoticeguiManager(plugin);
-            noticeguiManager.open(event.getPlayer());
+        Player player = event.getPlayer();
+
+        if (plugin.getConfig().getBoolean("setspawn.enable")){
+            setspawnManager.spawn(player);
         }
 
-        if (gcm.getBoolean("setspawn.enable")){
-            SetspawnManager setspawnManager = new SetspawnManager(plugin);
-            setspawnManager.spawn(event.getPlayer());
+        if (plugin.getConfig().getBoolean("notice-gui.enable")){
+            noticeguiManager.open(player);
         }
 
     }

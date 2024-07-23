@@ -1,16 +1,19 @@
-# 进服务GUI公告
-notice-gui:
-  enable: false
-  title: "欢迎来到我的服务器"
-  size: ""
-  sound: ""
-
 # 设置玩家出生点
 setspawn:
   enable: false
   x:
   y:
   z:
+  yaw:
+  pitch:
+  world:
+
+# 进服务GUI公告
+notice-gui:
+  enable: false
+  title: "欢迎来到我的服务器"
+  size: ""
+  sound: ""
 
 # 消息
 messages:

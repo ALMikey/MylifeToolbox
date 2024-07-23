@@ -20,7 +20,6 @@ public class Command implements CommandExecutor, TabExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, org.bukkit.command.Command command, String s, String[] strings) {
 
-
         GetConfigManager gcm = new GetConfigManager(plugin);
 
         if (strings.length < 1 ) return false;
